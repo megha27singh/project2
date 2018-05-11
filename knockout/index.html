@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>User Records</title>
+	<link rel="stylesheet" type="text/css" href="css/default.css">
+	<script src="scripts/jquery.js"></script>
+	<script src="scripts/knockout.js"></script>
+</head>
+
+<body>
+	<h1 class="head">User Management Application</h1>
+
+	<input type="text" id="userName" placeholder="Enter User Name" />
+	<input type="text" id="userEmail" placeholder="Enter User Email" />
+	<input type="text" id="userAddress" placeholder="Enter User Address" />
+	<input type="text" id="userContact" placeholder="Enter User Contact" />
+	<input type="text" id="userSender" placeholder="Enter User Sender Name" />
+	<input type="button" data-bind="click: addUser" class="button" value="Add User" />
+	<br></br>
+
+	<div class="row-title">
+		<div class="col">
+			User Name
+		</div>
+		<div class="col">
+			User Email
+		</div>
+		<div class="col">
+			User Address
+		</div>
+		<div class="col">
+			User Contact
+		</div>
+		<div class="col">
+			User Sender
+		</div>
+		<div class="clear"></div>
+
+	</div>
+	<!--end of row title -->
+	<div data-bind="foreach: users">
+		<div class="row">
+			<div class="col">
+				<span data-bind="text: userName"></span>
+			</div>
+			<div class="col">
+				<span data-bind="text: userEmail"></span>
+			</div>
+			<div class="col">
+				<span data-bind="text: userAddress"></span>
+			</div>
+			<div class="col">
+				<span data-bind="text: userContact"></span>
+			</div>
+			<div class="col">
+				<span data-bind="text: userSender"></span>
+			</div>
+			<div class="clear"></div>
+		</div>
+		<!--end of row -->
+	</div>
+	<!--end of foreach -->
+
+
+	<script src="scripts/default.js"></script>
+</body>
+
+</html>
